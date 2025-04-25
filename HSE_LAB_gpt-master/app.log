@@ -1,0 +1,143 @@
+2025-04-25 13:07:36,961 - CodeProcessor - ERROR - Error loading file Topics\1_Циклы.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Циклы.txt'
+2025-04-25 13:07:36,962 - CodeProcessor - ERROR - Error loading topic 1: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Циклы.txt'
+2025-04-25 13:07:36,962 - CodeProcessor - ERROR - Error loading file Topics\2_Условные операторы.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Условные операторы.txt'
+2025-04-25 13:07:36,962 - CodeProcessor - ERROR - Error loading topic 2: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Условные операторы.txt'
+2025-04-25 13:07:36,962 - CodeProcessor - ERROR - Error loading file Topics\3_Функции.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Функции.txt'
+2025-04-25 13:07:36,962 - CodeProcessor - ERROR - Error loading topic 3: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Функции.txt'
+2025-04-25 13:07:36,963 - CodeProcessor - ERROR - Error loading file Topics\4_Работа со строками.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Работа со строками.txt'
+2025-04-25 13:07:36,963 - CodeProcessor - ERROR - Error loading topic 4: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Работа со строками.txt'
+2025-04-25 13:07:36,963 - CodeProcessor - ERROR - Error loading file Topics\5_Коллекции.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Коллекции.txt'
+2025-04-25 13:07:36,963 - CodeProcessor - ERROR - Error loading topic 5: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Коллекции.txt'
+2025-04-25 13:07:36,963 - CodeProcessor - ERROR - Error loading file Topics\6_Работа с файлами.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Работа с файлами.txt'
+2025-04-25 13:07:36,963 - CodeProcessor - ERROR - Error loading topic 6: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Работа с файлами.txt'
+2025-04-25 13:07:36,963 - CodeProcessor - ERROR - Error loading file Topics\7_ООП.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_ООП.txt'
+2025-04-25 13:07:36,964 - CodeProcessor - ERROR - Error loading topic 7: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_ООП.txt'
+2025-04-25 13:07:36,964 - CodeProcessor - ERROR - Error loading file Topics\8_Исключения.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Исключения.txt'
+2025-04-25 13:07:36,964 - CodeProcessor - ERROR - Error loading topic 8: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Исключения.txt'
+2025-04-25 13:07:36,964 - CodeProcessor - ERROR - Error loading file Topics\9_Декораторы.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Декораторы.txt'
+2025-04-25 13:07:36,964 - CodeProcessor - ERROR - Error loading topic 9: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Декораторы.txt'
+2025-04-25 13:07:38,239 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 13:07:38,408 - CodeProcessor - ERROR - Database initialization failed: 
+2025-04-25 13:39:22,341 - CodeProcessor - ERROR - Error loading file Topics\1_Циклы.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Циклы.txt'
+2025-04-25 13:39:22,342 - CodeProcessor - ERROR - Error loading topic 1: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Циклы.txt'
+2025-04-25 13:39:22,342 - CodeProcessor - ERROR - Error loading file Topics\2_Условные операторы.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Условные операторы.txt'
+2025-04-25 13:39:22,342 - CodeProcessor - ERROR - Error loading topic 2: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Условные операторы.txt'
+2025-04-25 13:39:22,342 - CodeProcessor - ERROR - Error loading file Topics\3_Функции.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Функции.txt'
+2025-04-25 13:39:22,343 - CodeProcessor - ERROR - Error loading topic 3: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Функции.txt'
+2025-04-25 13:39:22,343 - CodeProcessor - ERROR - Error loading file Topics\4_Работа со строками.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Работа со строками.txt'
+2025-04-25 13:39:22,343 - CodeProcessor - ERROR - Error loading topic 4: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Работа со строками.txt'
+2025-04-25 13:39:22,343 - CodeProcessor - ERROR - Error loading file Topics\5_Коллекции.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Коллекции.txt'
+2025-04-25 13:39:22,344 - CodeProcessor - ERROR - Error loading topic 5: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Коллекции.txt'
+2025-04-25 13:39:22,344 - CodeProcessor - ERROR - Error loading file Topics\6_Работа с файлами.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Работа с файлами.txt'
+2025-04-25 13:39:22,344 - CodeProcessor - ERROR - Error loading topic 6: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Работа с файлами.txt'
+2025-04-25 13:39:22,344 - CodeProcessor - ERROR - Error loading file Topics\7_ООП.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_ООП.txt'
+2025-04-25 13:39:22,344 - CodeProcessor - ERROR - Error loading topic 7: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_ООП.txt'
+2025-04-25 13:39:22,345 - CodeProcessor - ERROR - Error loading file Topics\8_Исключения.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Исключения.txt'
+2025-04-25 13:39:22,345 - CodeProcessor - ERROR - Error loading topic 8: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Исключения.txt'
+2025-04-25 13:39:22,345 - CodeProcessor - ERROR - Error loading file Topics\9_Декораторы.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Декораторы.txt'
+2025-04-25 13:39:22,345 - CodeProcessor - ERROR - Error loading topic 9: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Декораторы.txt'
+2025-04-25 13:39:23,315 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 13:39:23,423 - CodeProcessor - ERROR - Database initialization failed: 
+2025-04-25 13:45:47,324 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 13:45:47,441 - CodeProcessor - ERROR - Database initialization failed: 
+2025-04-25 13:50:21,579 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 13:51:19,043 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:02:22,127 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:02:41,439 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:09:39,161 - CodeProcessor - ERROR - Error loading file Topics\1_Loops.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Loops.txt'
+2025-04-25 14:09:39,162 - CodeProcessor - ERROR - Error loading topic 1: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Loops.txt'
+2025-04-25 14:09:39,162 - CodeProcessor - ERROR - Error loading file Topics\2_Conditions.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Conditions.txt'
+2025-04-25 14:09:39,162 - CodeProcessor - ERROR - Error loading topic 2: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Conditions.txt'
+2025-04-25 14:09:39,163 - CodeProcessor - ERROR - Error loading file Topics\3_Functions.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Functions.txt'
+2025-04-25 14:09:39,163 - CodeProcessor - ERROR - Error loading topic 3: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Functions.txt'
+2025-04-25 14:09:39,163 - CodeProcessor - ERROR - Error loading file Topics\4_Strings.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Strings.txt'
+2025-04-25 14:09:39,163 - CodeProcessor - ERROR - Error loading topic 4: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Strings.txt'
+2025-04-25 14:09:39,163 - CodeProcessor - ERROR - Error loading file Topics\5_Collections.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Collections.txt'
+2025-04-25 14:09:39,163 - CodeProcessor - ERROR - Error loading topic 5: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Collections.txt'
+2025-04-25 14:09:39,164 - CodeProcessor - ERROR - Error loading file Topics\6_Files.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Files.txt'
+2025-04-25 14:09:39,164 - CodeProcessor - ERROR - Error loading topic 6: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Files.txt'
+2025-04-25 14:09:39,164 - CodeProcessor - ERROR - Error loading file Topics\7_OOP.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_OOP.txt'
+2025-04-25 14:09:39,164 - CodeProcessor - ERROR - Error loading topic 7: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_OOP.txt'
+2025-04-25 14:09:39,164 - CodeProcessor - ERROR - Error loading file Topics\8_Exceptions.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Exceptions.txt'
+2025-04-25 14:09:39,165 - CodeProcessor - ERROR - Error loading topic 8: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Exceptions.txt'
+2025-04-25 14:09:39,165 - CodeProcessor - ERROR - Error loading file Topics\9_Decorators.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Decorators.txt'
+2025-04-25 14:09:39,165 - CodeProcessor - ERROR - Error loading topic 9: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Decorators.txt'
+2025-04-25 14:09:40,436 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:11:26,037 - CodeProcessor - ERROR - Error loading file Topics\1_Loops.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Loops.txt'
+2025-04-25 14:11:26,037 - CodeProcessor - ERROR - Error loading topic 1: [Errno 2] No such file or directory: 'Prompts\\Topics\\1_Loops.txt'
+2025-04-25 14:11:26,037 - CodeProcessor - ERROR - Error loading file Topics\2_Conditions.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Conditions.txt'
+2025-04-25 14:11:26,037 - CodeProcessor - ERROR - Error loading topic 2: [Errno 2] No such file or directory: 'Prompts\\Topics\\2_Conditions.txt'
+2025-04-25 14:11:26,038 - CodeProcessor - ERROR - Error loading file Topics\3_Functions.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Functions.txt'
+2025-04-25 14:11:26,038 - CodeProcessor - ERROR - Error loading topic 3: [Errno 2] No such file or directory: 'Prompts\\Topics\\3_Functions.txt'
+2025-04-25 14:11:26,038 - CodeProcessor - ERROR - Error loading file Topics\4_Strings.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Strings.txt'
+2025-04-25 14:11:26,038 - CodeProcessor - ERROR - Error loading topic 4: [Errno 2] No such file or directory: 'Prompts\\Topics\\4_Strings.txt'
+2025-04-25 14:11:26,039 - CodeProcessor - ERROR - Error loading file Topics\5_Collections.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Collections.txt'
+2025-04-25 14:11:26,039 - CodeProcessor - ERROR - Error loading topic 5: [Errno 2] No such file or directory: 'Prompts\\Topics\\5_Collections.txt'
+2025-04-25 14:11:26,039 - CodeProcessor - ERROR - Error loading file Topics\6_Files.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Files.txt'
+2025-04-25 14:11:26,039 - CodeProcessor - ERROR - Error loading topic 6: [Errno 2] No such file or directory: 'Prompts\\Topics\\6_Files.txt'
+2025-04-25 14:11:26,040 - CodeProcessor - ERROR - Error loading file Topics\7_OOP.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_OOP.txt'
+2025-04-25 14:11:26,040 - CodeProcessor - ERROR - Error loading topic 7: [Errno 2] No such file or directory: 'Prompts\\Topics\\7_OOP.txt'
+2025-04-25 14:11:26,040 - CodeProcessor - ERROR - Error loading file Topics\8_Exceptions.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Exceptions.txt'
+2025-04-25 14:11:26,040 - CodeProcessor - ERROR - Error loading topic 8: [Errno 2] No such file or directory: 'Prompts\\Topics\\8_Exceptions.txt'
+2025-04-25 14:11:26,041 - CodeProcessor - ERROR - Error loading file Topics\9_Decorators.txt: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Decorators.txt'
+2025-04-25 14:11:26,041 - CodeProcessor - ERROR - Error loading topic 9: [Errno 2] No such file or directory: 'Prompts\\Topics\\9_Decorators.txt'
+2025-04-25 14:11:26,796 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:19:25,737 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:19:25,738 - CodeProcessor - ERROR - Syntax error in code processing: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-04-25 14:19:25,739 - CodeProcessor - ERROR - Syntax error in code processing: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-04-25 14:23:34,593 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:23:34,594 - CodeProcessor - ERROR - Syntax error in code processing: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-04-25 14:23:34,595 - CodeProcessor - ERROR - Syntax error in code processing: expected an indented block after function definition on line 1 (<unknown>, line 2)
+2025-04-25 14:28:22,882 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:31:49,952 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:32:23,373 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:37:11,476 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:43:07,344 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:43:41,530 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:44:00,608 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:47:47,063 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:55:47,621 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 14:56:55,222 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:03:31,356 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:06:14,678 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:11:47,315 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:12:20,226 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:13:44,211 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:21:50,873 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:25:29,485 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 15:25:54,310 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:02:58,805 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:06:48,365 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:08:49,976 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:10:19,346 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:16:13,582 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:17:16,163 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:17:25,885 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:18:12,565 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:19:40,119 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:19:50,336 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:22:37,656 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:23:58,452 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:25:23,886 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:27:25,553 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:27:25,566 - CodeProcessor - ERROR - Error processing code: name 're' is not defined
+2025-04-25 20:27:31,708 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:27:31,721 - CodeProcessor - ERROR - Error processing code: name 're' is not defined
+2025-04-25 20:28:13,895 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:30:10,350 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:31:39,509 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:32:09,052 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:32:17,774 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:33:49,149 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:34:10,021 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:34:57,905 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:35:18,686 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:36:49,377 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:38:05,059 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:39:36,690 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:40:38,508 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:41:49,136 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:42:49,939 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:44:06,864 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:45:07,985 - CodeProcessor - INFO - Yandex ML configured successfully
+2025-04-25 20:45:21,433 - CodeProcessor - INFO - Yandex ML configured successfully
