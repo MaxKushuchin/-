@@ -1,10 +1,14 @@
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Tuple
 import ast
 from ast import parse, ClassDef, FunctionDef, Try, For, While, AST, If
 from Logger import logger
+import difflib
 
 
 class SolutionAnalyzer:
+    def __init__(self):
+        self.previous_attempts = {}  # Для хранения предыдущих попыток
+
     def analyze(self, user_code: str, reference_code: str, criteria: Dict[str, float]) -> Dict[str, Any]:
         """
         Анализирует решение пользователя на основе эталонного кода и критериев оценки.
@@ -66,8 +70,22 @@ class SolutionAnalyzer:
 
                 detailed_feedback[criterion] = {
                     'score': round(criterion_score * 100),
-                    'feedback': '\n'.join(criterion_feedback)
+                    'feedback': '\n'.join(criterion_feedback),
+                    'improvement_suggestions': self._get_improvement_suggestions(criterion, user_code, reference_code)
                 }
+
+            # Анализ изменений между попытками
+            if user_code in self.previous_attempts:
+                prev_score = self.previous_attempts[user_code]['score']
+                progress = score - prev_score
+                feedback.append(f"\n📈 Прогресс с предыдущей попытки: {'+' if progress >= 0 else ''}{progress:.1f}%")
+
+                # Анализ конкретных изменений
+                diff_feedback = self._analyze_code_changes(user_code, self.previous_attempts[user_code]['code'])
+                feedback.extend(diff_feedback)
+
+            # Сохраняем текущую попытку
+            self.previous_attempts[user_code] = {'score': score, 'code': user_code}
 
         except SyntaxError as e:
             error_msg = f"❌ Синтаксическая ошибка: {e}"
@@ -89,8 +107,125 @@ class SolutionAnalyzer:
         return {
             "score": round(score),
             "feedback": feedback,
-            "detailed_feedback": detailed_feedback
+            "detailed_feedback": detailed_feedback,
+            "code_analysis": self._get_code_analysis(user_code, reference_code)
         }
+
+    def _general_check(self, code: str, criterion: str) -> float:
+        """Общая проверка для неизвестных критериев"""
+        keywords = {
+            'файловые операции': ['open(', 'with open(', 'read(', 'write('],
+            'контекстные менеджеры': ['with '],
+            'исключения': ['try:', 'except ', 'finally:']
+        }
+
+        for pattern, terms in keywords.items():
+            if pattern in criterion.lower():
+                return 0.8 if any(term in code for term in terms) else 0.2
+
+        return 0.5
+
+    def _analyze_code_changes(self, current_code: str, previous_code: str) -> List[str]:
+        """Анализирует изменения между текущей и предыдущей версиями кода"""
+        feedback = []
+        diff = difflib.unified_diff(
+            previous_code.splitlines(),
+            current_code.splitlines(),
+            fromfile='previous',
+            tofile='current',
+            lineterm=''
+        )
+
+        diff_lines = list(diff)
+        if len(diff_lines) > 3:  # Игнорируем служебные строки
+            added = sum(1 for line in diff_lines if line.startswith('+') and not line.startswith('+++'))
+            removed = sum(1 for line in diff_lines if line.startswith('-') and not line.startswith('---'))
+
+            feedback.append(f"Изменения: +{added} строк, -{removed} строк")
+
+            # Анализ ключевых изменений
+            key_changes = [
+                line[1:] for line in diff_lines
+                if line.startswith('+') and any(kw in line for kw in ['def ', 'class ', 'if ', 'for ', 'try '])
+            ]
+
+            if key_changes:
+                feedback.append("Ключевые изменения:")
+                feedback.extend(key_changes[:3])  # Показываем не более 3 ключевых изменений
+
+        return feedback
+
+
+    def _get_code_analysis(self, user_code: str, reference_code: str) -> Dict[str, Any]:
+        """Возвращает детальный анализ структуры кода"""
+        user_components = self._get_code_components(user_code)
+        ref_components = self._get_code_components(reference_code) if reference_code else None
+
+        analysis = {
+            'user_code': user_components,
+            'reference_code': ref_components,
+            'matches': {
+                'functions': self._calculate_match(user_components['functions'],
+                                                   ref_components['functions'] if ref_components else []),
+                'classes': self._calculate_match(user_components['classes'],
+                                                 ref_components['classes'] if ref_components else []),
+                'loops': self._calculate_match(user_components['loops'], ref_components['loops'] if ref_components else []),
+                'conditions': self._calculate_match(user_components['conditions'],
+                                                    ref_components['conditions'] if ref_components else [])
+            }
+        }
+
+        return analysis
+
+
+    def _calculate_match(self, user_items: List, ref_items: List) -> Dict[str, float]:
+        """Вычисляет степень соответствия между элементами кода"""
+        if not ref_items:
+            return {'score': 0.0, 'missing': [], 'extra': []}
+
+        user_set = set(user_items)
+        ref_set = set(ref_items)
+
+        missing = list(ref_set - user_set)
+        extra = list(user_set - ref_set)
+        common = len(user_set & ref_set)
+
+        return {
+            'score': common / len(ref_set),
+            'missing': missing,
+            'extra': extra
+        }
+
+
+    def _get_improvement_suggestions(self, criterion: str, user_code: str, reference_code: str) -> List[str]:
+        """Генерирует рекомендации по улучшению для конкретного критерия"""
+        suggestions = []
+
+        if "корректность" in criterion.lower() and reference_code:
+            user_funcs = self._get_code_components(user_code)['functions']
+            ref_funcs = self._get_code_components(reference_code)['functions']
+            missing_funcs = set(ref_funcs) - set(user_funcs)
+
+            if missing_funcs:
+                suggestions.append(f"Добавьте недостающие функции: {', '.join(missing_funcs)}")
+
+        if "оптимизация" in criterion.lower():
+            tree = ast.parse(user_code)
+            has_nested_loops = any(
+                isinstance(node, (For, While)) and
+                any(isinstance(sub_node, (For, While)) for sub_node in ast.walk(node))
+                for node in ast.walk(tree)
+            )
+
+            if has_nested_loops:
+                suggestions.append("Оптимизируйте вложенные циклы - попробуйте использовать более эффективные алгоритмы")
+
+        if "читаемость" in criterion.lower():
+            if "#" not in user_code and '"""' not in user_code:
+                suggestions.append("Добавьте комментарии для объяснения сложных частей кода")
+
+        return suggestions if suggestions else ["Код соответствует лучшим практикам"]
+
 
     def _generate_general_feedback(self, code: str, score: float) -> List[str]:
         """Генерирует общие рекомендации по коду"""
@@ -108,6 +243,7 @@ class SolutionAnalyzer:
             feedback.append("ℹ️ Добавьте комментарии для улучшения читаемости")
 
         return feedback
+
 
     def _check_correctness(self, user_code: str, reference_code: str) -> float:
         """Проверка корректности реализации"""
@@ -129,6 +265,7 @@ class SolutionAnalyzer:
 
         return min(1.0, match_score)
 
+
     def _check_optimization(self, tree: AST) -> float:
         """Проверка оптимизации кода"""
         has_nested_loops = any(
@@ -138,6 +275,7 @@ class SolutionAnalyzer:
         )
         return 0.8 if not has_nested_loops else 0.3
 
+
     def _check_readability(self, tree: AST) -> float:
         """Проверка читаемости кода"""
         has_comments = any(
@@ -146,10 +284,12 @@ class SolutionAnalyzer:
         )
         return 0.9 if has_comments else 0.5
 
+
     def _check_error_handling(self, tree: AST) -> float:
         """Проверка обработки ошибок"""
         has_error_handling = any(isinstance(node, Try) for node in ast.walk(tree))
         return 1.0 if has_error_handling else 0.2
+
 
     def _check_functions(self, user_tree: AST, ref_tree: AST) -> float:
         """Проверка реализации функций"""
@@ -165,6 +305,7 @@ class SolutionAnalyzer:
         implemented = sum(1 for func in ref_funcs if func in user_funcs)
         return implemented / len(ref_funcs)
 
+
     def _check_classes(self, user_tree: AST, ref_tree: AST) -> float:
         """Проверка реализации классов"""
         if not ref_tree:
@@ -178,6 +319,7 @@ class SolutionAnalyzer:
 
         implemented = sum(1 for cls in ref_classes if cls in user_classes)
         return implemented / len(ref_classes)
+
 
     def _general_check(self, code: str, criterion: str) -> float:
         """Общая проверка для неизвестных критериев"""
@@ -193,6 +335,7 @@ class SolutionAnalyzer:
 
         return 0.5
 
+
     def _get_code_components(self, code: str) -> Dict[str, List]:
         """Анализирует код и возвращает его основные компоненты"""
         tree = ast.parse(code)
@@ -201,4 +344,4 @@ class SolutionAnalyzer:
             'classes': [n.name for n in ast.walk(tree) if isinstance(n, ClassDef)],
             'loops': [n.__class__.__name__ for n in ast.walk(tree) if isinstance(n, (For, While))],
             'conditions': [n.__class__.__name__ for n in ast.walk(tree) if isinstance(n, If)]
-        }
+    }
